@@ -1,0 +1,145 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-WebApp-62f0a401-1f06-4d12-b895-a2ad7e4792eb</UserSecretsId>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LogUtility\**" />
+    <Compile Remove="Views\Base\**" />
+    <Content Remove="LogUtility\**" />
+    <Content Remove="Views\Base\**" />
+    <EmbeddedResource Remove="LogUtility\**" />
+    <EmbeddedResource Remove="Views\Base\**" />
+    <None Remove="LogUtility\**" />
+    <None Remove="Views\Base\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="itext7" Version="7.2.5" />
+    <PackageReference Include="itext7.pdfhtml" Version="4.0.5" />
+    <PackageReference Include="log4net" Version="3.0.4" />
+    <PackageReference Include="log4net.Ext.Json" Version="3.0.3" />
+    <PackageReference Include="MailKit" Version="4.11.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="9.0.6" />
+    <PackageReference Include="QRCoder" Version="1.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\assets\vendor\datatables\media\js\dataTables.select.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\vendor\axios\axios.min.js" />
+    <None Include="wwwroot\assets\vendor\axios\axios.min.map" />
+    <None Include="wwwroot\assets\vendor\datatables\media\js\dataTables.select.min.js" />
+    <None Include="wwwroot\assets\vendor\flot.tooltip\flot.tooltip.js" />
+    <None Include="wwwroot\assets\vendor\flot\API.md" />
+    <None Include="wwwroot\assets\vendor\flot\CONTRIBUTING.md" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\date.js" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\africa" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\antarctica" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\asia" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\australasia" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\backward" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\etcetera" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\europe" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\factory" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\iso3166.tab" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\leapseconds" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\northamerica" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\pacificnew" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\solar87" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\solar88" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\solar89" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\southamerica" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\systemv" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\yearistype.sh" />
+    <None Include="wwwroot\assets\vendor\flot\examples\axes-time-zones\tz\zone.tab" />
+    <None Include="wwwroot\assets\vendor\flot\examples\shared\jquery-ui\jquery-ui.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\excanvas.js" />
+    <None Include="wwwroot\assets\vendor\flot\excanvas.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\FAQ.md" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.colorhelpers.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.colorhelpers.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.canvas.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.canvas.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.categories.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.categories.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.crosshair.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.crosshair.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.errorbars.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.errorbars.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.fillbetween.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.fillbetween.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.image.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.image.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.navigate.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.navigate.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.pie.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.pie.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.resize.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.resize.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.selection.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.selection.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.stack.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.stack.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.symbol.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.symbol.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.threshold.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.threshold.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.time.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.flot.time.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.js" />
+    <None Include="wwwroot\assets\vendor\flot\jquery.min.js" />
+    <None Include="wwwroot\assets\vendor\flot\Makefile" />
+    <None Include="wwwroot\assets\vendor\flot\NEWS.md" />
+    <None Include="wwwroot\assets\vendor\flot\PLUGINS.md" />
+    <None Include="wwwroot\assets\vendor\flot\README.md" />
+    <None Include="wwwroot\assets\vendor\fuelux\js\spinner.js" />
+    <None Include="wwwroot\assets\vendor\gauge\gauge.coffee" />
+    <None Include="wwwroot\assets\vendor\gauge\gauge.js" />
+    <None Include="wwwroot\assets\vendor\gauge\gauge.min.js" />
+    <None Include="wwwroot\assets\vendor\jquery-appear\jquery-appear.js" />
+    <None Include="wwwroot\assets\vendor\jquery-mask\jquery.mask.js" />
+    <None Include="wwwroot\assets\vendor\jquery-sparkline\jquery-sparkline.js" />
+    <None Include="wwwroot\assets\vendor\jquery.easy-pie-chart\jquery.easy-pie-chart.js" />
+    <None Include="wwwroot\assets\vendor\jqueryui-touch-punch\jqueryui-touch-punch.js" />
+    <None Include="wwwroot\assets\vendor\raphael\raphael.js" />
+    <None Include="wwwroot\assets\vendor\snap.svg\snap.svg.js" />
+    <None Include="wwwroot\assets\vendor\vue\vue.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\assets\styles_Laudo\page-educacional-info.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\styles_Carteirinha\images\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+﻿using System.Reflection;
+using LibraryApi.Application.Common.Interfaces;
+using LibraryApi.Domain.Entities;
+using LibraryApi.Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
+namespace LibraryApi.Infrastructure.Data;
+
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
+{
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+    public DbSet<Book> Books => Set<Book>();
+    public DbSet<BookRental> BooksRental => Set<BookRental>();
+    public DbSet<Genre> Genres => Set<Genre>();
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
+}

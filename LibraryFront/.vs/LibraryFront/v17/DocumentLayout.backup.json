@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\controllers\\genrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\controllers\\genrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\apiclient\\genreclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\apiclient\\genreclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\wwwroot\\js\\genre.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\wwwroot\\js\\genre.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\models\\genremodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\models\\genremodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\dto\\genresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\dto\\genresdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\dto\\genredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\dto\\genredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\views\\genre\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\genre\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|c:\\projetos\\testes\\uno\\library\\libraryfront\\webapp\\views\\genre\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B5A9180-64BA-40E9-8D5C-E61234A900D0}|WebApp\\WebApp.csproj|solutionrelative:webapp\\views\\genre\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "genre.js",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\wwwroot\\js\\genre.js",
+              "RelativeDocumentMoniker": "WebApp\\wwwroot\\js\\genre.js",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\wwwroot\\js\\genre.js",
+              "RelativeToolTip": "WebApp\\wwwroot\\js\\genre.js",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-16T18:01:20.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T17:58:28.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GenresDto.cs",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Dto\\GenresDto.cs",
+              "RelativeDocumentMoniker": "WebApp\\Dto\\GenresDto.cs",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Dto\\GenresDto.cs",
+              "RelativeToolTip": "WebApp\\Dto\\GenresDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T17:53:12.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GenreDto.cs",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Dto\\GenreDto.cs",
+              "RelativeDocumentMoniker": "WebApp\\Dto\\GenreDto.cs",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Dto\\GenreDto.cs",
+              "RelativeToolTip": "WebApp\\Dto\\GenreDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T17:53:00.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Views\\Genre\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Genre\\Index.cshtml",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Views\\Genre\\Index.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Genre\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T17:45:54.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Views\\Genre\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApp\\Views\\Genre\\Create.cshtml",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Views\\Genre\\Create.cshtml",
+              "RelativeToolTip": "WebApp\\Views\\Genre\\Create.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-16T17:44:49.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenreClient.cs",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\ApiClient\\GenreClient.cs",
+              "RelativeDocumentMoniker": "WebApp\\ApiClient\\GenreClient.cs",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\ApiClient\\GenreClient.cs",
+              "RelativeToolTip": "WebApp\\ApiClient\\GenreClient.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAewCMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T17:41:38.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GenreModel.cs",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Models\\GenreModel.cs",
+              "RelativeDocumentMoniker": "WebApp\\Models\\GenreModel.cs",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Models\\GenreModel.cs",
+              "RelativeToolTip": "WebApp\\Models\\GenreModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T17:37:33.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenreController.cs",
+              "DocumentMoniker": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Controllers\\GenreController.cs",
+              "RelativeDocumentMoniker": "WebApp\\Controllers\\GenreController.cs",
+              "ToolTip": "C:\\Projetos\\Testes\\Uno\\Library\\LibraryFront\\WebApp\\Controllers\\GenreController.cs",
+              "RelativeToolTip": "WebApp\\Controllers\\GenreController.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAkwHYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T17:33:17.959Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

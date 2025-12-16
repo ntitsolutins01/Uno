@@ -1,0 +1,307 @@
+﻿@model WebApp.Models.BookModel
+@{
+    ViewData["Title"] = "Book List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="vBook">
+    <div class="row">
+        <div class="col-md-12" id="pFiltro">
+            @using (@Html.BeginForm("Index", "Book", FormMethod.Post, new { id = "formSearchBook", @class = "form-horizontal" }))
+            {
+                <section class="panel">
+                    <header class="panel-heading">
+                        <div class="panel-actions">
+                            <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
+                        </div>
+                        <h2 class="panel-title">Search filter</h2>
+                    </header>
+                    <div class="panel-body">
+                        <label class="col-sm-2 control-label">Genre:</label>
+                        <div class="col-md-4 form-group">
+                            <select class="form-control populate select2" name="ddlGenre" id="ddlGenre" style="width: 100%"
+                                    asp-for="GenreId" asp-items="Model.ListGenre">
+                                <option value="">Select Genre</option>
+                            </select>
+                        </div>
+                        <label class="col-sm-2 control-label">Language:</label>
+                        <div class="col-md-4 form-group">
+                            <select class="form-control populate select2" name="ddlLanguage" id="ddlLanguage" style="width: 100%"
+                                    asp-for="LanguageId" asp-items="Model.ListLanguage">
+                                <option value="">Select Language</option>
+                            </select>
+                        </div>
+                    </div>
+                    <footer class="panel-footer">
+                        <div class="row">
+                            <div class="col-sm-2 pull-right">
+                                <button type="submit" class="btn btn-block btn-primary pull-right"><i class="fa fa-search"></i> &nbsp;&nbsp;Search</button>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="card-action card-action-toggle" data-card-toggle></a>
+                    </div>
+                    <h2 class="panel-title">Book List</h2>
+                </header>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <div class="col-sm-12 pull-right">
+                            <a href="@Url.Action("Create", "Book")" id="addToTable" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> New Book </a>
+                        </div>
+                    </div>
+                    <table class="table table-bordered table-striped mb-0" id="datatable-default">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Id</th>
+                                <th class="text-center">Title</th>
+                                <th class="text-center">Author</th>
+                                <th class="text-center">Description</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @if (Model.Books != null)
+                        {
+                            foreach (var item in Model.Books)
+                            {
+                                <tr>
+                                    <td class="text-center" style="width:20px;">@Html.DisplayFor(modelItem => item.Id)</td>
+                                    <td class="text-center">@Html.DisplayFor(modelItem => item.Title)</td>
+                                    <td class="text-center">@Html.DisplayFor(modelItem => item.Author)</td>
+                                    <td class="text-center">@Html.DisplayFor(modelItem => item.Description)</td>
+                                        <td class="actions text-center">
+                                            <a data-toggle="tooltip" data-placement="top" title="Rent"
+                                               href='javascript:(crud.RentModal(@item.Id))'
+                                               class="on-default update-row" style='color: #28B463'>
+                                                <i class="fa fa-exchange"></i>
+                                            </a>
+                                        <a data-toggle="tooltip" data-placement="top" title="Update"
+                                           href='javascript:(crud.UpdateModal(@item.Id))'
+                                           class="on-default update-row" style='color: #FF9800'>
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                        <a data-toggle="tooltip" data-placement="top" title="Excluir" href='javascript:(crud.DeleteModal(@item.Id))'
+                                           class="on-default remove-row" style="cursor: pointer;color: #F44336">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="mdDeleteBook" tabindex="-1" role="dialog" aria-labelledby="mdDeleteBookLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mdDeleteBookLabel">
+                        <i class="fa fa-trash"></i> &nbsp;&nbsp;<strong>Delete Book</strong>
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-icon">
+                        <i class="fa fa-question-circle"></i>
+                    </div>
+                    <div class="modal-text">
+                        <input type="hidden" id="deleteBookId" />
+                        <p class="mb-0">Are you sure you want to <b>delete</b> this book?</p>
+                    </div>
+                    <div class="modal-wrapper">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger pull-right" style="margin-left: 5px;" data-dismiss="modal"><i class="fa fa-thumbs-o-down"></i> &nbsp;&nbsp;No</button>
+                    <a id="deleteBookHref" class="btn btn-success pull-right" style="margin-left: 5px;"><i class="fa fa-thumbs-o-up"></i> &nbsp;&nbsp;Yes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="mdUpdateBook" tabindex="-1" role="dialog" aria-labelledby="mdUpdateBookLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mdUpdateBookLabel">
+                        <i class="fa fa-pencil"></i> &nbsp;&nbsp;<strong>Update Book</strong>
+                    </h5>
+                </div>
+                @using (@Html.BeginForm("Update", "Book", FormMethod.Post, new { id = "formUpdateBook", @class = "form-horizontal" }))
+                {
+                    <div class="modal-body">
+                        <input type="hidden" name="updateBookId" :value="updateDto.Id" />
+                        <div class="form-group row">
+                            <label class="col-sm-3 control-label text-sm-right pt-2">Title: <span class="required">*</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" name="title" :value="updateDto.Title" class="form-control"
+                                       maxlength="200"
+                                       title="Please enter the title name." required />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 control-label text-sm-right pt-2">Author: <span class="required">*</span></label>
+                            <div class="col-sm-9">
+                                <input type="text" name="author" :value="updateDto.Author" class="form-control"
+                                       maxlength="100" 
+                                       title="Please enter the author name." />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label text-sm-right pt-2">Description: </label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="7" maxlength="500" name="description" v-model="updateDto.Description" id="description"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 control-label text-sm-right pt-2">Genre <span class="required">*</span></label>
+                            <div class="col-sm-4">
+                                <input type="text" name="genre" class="form-control" v-model="updateDto.Genre"
+                                       maxlength="50" required oninput="this.value = this.value.toUpperCase()"
+                                       title="Please enter the author name." />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 control-label text-sm-right pt-2">Language <span class="required">*</span></label>
+                            <div class="col-sm-9">
+                                <select class="form-control populate select2" name="ddlLanguageUpdate" id="ddlLanguageUpdate" style="width:100%"
+                                        required title="Please select the language.">
+                                    <option value="">Select Language</option>
+                                    <option value="En">English</option>
+                                    <option value="Pt">Portuguese</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-danger pull-right" style="margin-left: 5px;" data-dismiss="modal"><i class="fa fa-remove"></i> &nbsp;&nbsp;Cancel</button>
+                        <button type="submit" class="btn btn-success pull-right" style="margin-left: 5px;"><i class="fa fa-save"></i> &nbsp;&nbsp;Save</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mdRentBook" tabindex="-1" role="dialog" aria-labelledby="mdRentBookLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mdRentBookLabel">
+                        <i class="fa fa-exchange"></i> &nbsp;&nbsp;<strong>Rent Book</strong>
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-icon">
+                        <i class="fa fa-question-circle"></i>
+                    </div>
+                    <div class="modal-text">
+                        <input type="hidden" id="rentBookId" />
+                        <p class="mb-0">Are you sure you want to <b>rent</b> this book?</p>
+                    </div>
+                    <div class="modal-wrapper">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger pull-right" style="margin-left: 5px;" data-dismiss="modal"><i class="fa fa-thumbs-o-down"></i> &nbsp;&nbsp;No</button>
+                    <a id="rentBookHref" class="btn btn-success pull-right" style="margin-left: 5px;"><i class="fa fa-thumbs-o-up"></i> &nbsp;&nbsp;Yes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section CssSpecificVendor {
+    <link rel="stylesheet" href="~/assets/vendor/select2/css/select2.css" />
+    <link rel="stylesheet" href="~/assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/vendor/datatables/media/css/dataTables.bootstrap4.css" />
+}
+@section Scripts {
+    <script src="~/assets/vendor/select2/js/select2.js"></script>
+    <script src="~/assets/vendor/jquery-validation/jquery.validate.js"></script>
+    <script src="~/assets/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="~/assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/js/formatTable.js"></script>
+    <script src="~/js/book.js"></script>
+
+    <script>
+
+        (function ($) {
+
+            'use strict';
+            var crud = @ViewBag.CrudMessage;
+
+            if (crud === 1) {
+                new PNotify({
+                    title: 'Book',
+                    text: 'Book registered success!',
+                    type: 'success'
+                });
+                crud = 0;
+            } else if (crud === 2) {
+                new PNotify({
+                    title: 'Book',
+                    text: 'Book changed successfully.',
+                    type: 'warning',
+                    icon: 'fa fa-pencil'
+                });
+                crud = 0;
+            } else if (crud === 3) {
+                new PNotify({
+                    title: 'Book',
+                    text: 'Book deleted successfully.',
+                    type: 'error',
+                    icon: 'fa fa-trash-o'
+                });
+                crud = 0;
+            }
+
+
+            var notify = @ViewBag.NotifyMessage;
+            var messagem = '@ViewBag.Notify';
+
+            if (notify === 0) {
+                new PNotify({
+                    title: 'Book',
+                    text: messagem,
+                    type: 'success'
+                });
+                crud = 0;
+            } else if (notify === 1) {
+                new PNotify({
+                    title: 'Book',
+                    text: messagem,
+                    type: 'warning'
+                });
+                crud = 0;
+            } else if (notify === 2) {
+                new PNotify({
+                    title: 'Book',
+                    text: messagem,
+                    type: 'error'
+                });
+                crud = 0;
+            }
+
+            if ($.isFunction($.fn['tooltip'])) {
+                $('[data-toggle=tooltip],[rel=tooltip]').tooltip({ container: 'body' });
+            }
+
+        }).apply(this, [jQuery]);
+    </script>
+}
+
+
+
